@@ -18,6 +18,11 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     /**
      * Home Routes
      */
+
+    //  Route::get('/', function(\App\paymentService\PaypalAPI $payment) {
+    //     dump($payment->pay());
+    //     dd(app());
+    //  } );
     Route::get('/', 'HomeController@index')->name('home.index');
 
     Route::group(['middleware' => ['guest']], function() {
